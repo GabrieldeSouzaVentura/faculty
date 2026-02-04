@@ -49,7 +49,7 @@ int main() {
     printf("Pontos Turisticos: ");
     scanf("%d", &pontos1);
 
-    //Cálculos da Carta 1
+    // Calculos da Carta 1
     densidade1 = (float)populacao1 / area1;
     pibPerCapita1 = (pib1 * 1000000000.0) / populacao1;
 
@@ -63,7 +63,7 @@ int main() {
 
 
     // Entrada de dados da Carta 2
-    printf("\n=== Cadastro Carta 2 ===\n");
+    printf("\n=== Cadastro da Carta 2 ===\n");
 
     printf("Estado: ");
     scanf(" %c", &estado2);
@@ -150,6 +150,23 @@ int main() {
 
     r = superPoder1 > superPoder2;
     printf("Super Poder: Carta %d venceu (%d)\n", r ? 1 : 2, r);
+
+    // Exibicao da comparacao
+    printf("\nComparacao de cartas (Atributo: Populacao)\n\n");
+
+    printf("Carta 1 - %s (%c): %lu\n", cidade1, estado1, populacao1);
+    printf("Carta 2 - %s (%c): %lu\n\n", cidade2, estado2, populacao2);
+
+    // Logica de comparacao usando if / else
+    if (populacao1 > populacao2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    }
+    else if (populacao2 > populacao1) {
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    }
+    else {
+        printf("Resultado: Empate!\n");
+    }
 
     return 0;
 }
